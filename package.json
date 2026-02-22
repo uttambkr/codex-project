@@ -1,0 +1,12 @@
+{
+  "name": "chatwave",
+  "version": "1.0.0",
+  "description": "WhatsApp-style real-time chat demo",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["chat", "realtime", "whatsapp", "demo"],
+  "license": "MIT"
+}
