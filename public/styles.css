@@ -1,0 +1,160 @@
+:root {
+  color-scheme: light;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: #e8f0eb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #f5fffa 0%, #d9ece2 55%, #c9dfd2 100%);
+}
+
+.app-shell {
+  max-width: 1080px;
+  margin: 2rem auto;
+  min-height: 80vh;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(30, 64, 50, 0.2);
+}
+
+.sidebar {
+  background: #0b6652;
+  color: #f1fff9;
+  padding: 1.5rem;
+}
+
+h1 {
+  margin: 0;
+}
+
+.subtitle {
+  margin-top: 0.2rem;
+  color: #c7eee0;
+  font-size: 0.9rem;
+}
+
+.profile {
+  margin: 1.1rem 0 1.8rem;
+  display: grid;
+  gap: 0.6rem;
+}
+
+input,
+button {
+  border-radius: 8px;
+  border: none;
+  padding: 0.65rem 0.8rem;
+  font-size: 0.95rem;
+}
+
+button {
+  font-weight: 600;
+  background: #25d366;
+  color: #073b2e;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+#onlineList {
+  list-style: none;
+  padding: 0;
+  margin: 0.6rem 0 0;
+  display: grid;
+  gap: 0.4rem;
+}
+
+#onlineList li {
+  background: #ffffff25;
+  padding: 0.5rem 0.65rem;
+  border-radius: 7px;
+}
+
+.chat-panel {
+  background: #f4fdf7;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.chat-panel header {
+  padding: 1rem 1.2rem;
+  border-bottom: 1px solid #d5e8dc;
+}
+
+.chat-panel h2 {
+  margin: 0;
+}
+
+#typingIndicator {
+  color: #4f6f63;
+  font-size: 0.85rem;
+}
+
+.messages {
+  padding: 1rem;
+  overflow-y: auto;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.bubble {
+  max-width: 70%;
+  padding: 0.6rem 0.8rem;
+  border-radius: 12px;
+  display: grid;
+  gap: 0.2rem;
+}
+
+.bubble.mine {
+  justify-self: end;
+  background: #dcf8c6;
+}
+
+.bubble.theirs {
+  justify-self: start;
+  background: #fff;
+}
+
+.bubble.system {
+  justify-self: center;
+  background: #ecf1ee;
+  color: #5a6d62;
+  font-size: 0.85rem;
+}
+
+.meta {
+  font-size: 0.75rem;
+  color: #6f7d76;
+}
+
+.composer {
+  border-top: 1px solid #d5e8dc;
+  padding: 0.8rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.6rem;
+}
+
+@media (max-width: 760px) {
+  .app-shell {
+    margin: 0;
+    min-height: 100vh;
+    border-radius: 0;
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    padding-bottom: 1rem;
+  }
+}

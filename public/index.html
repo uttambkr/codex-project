@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChatWave</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <h1>ChatWave</h1>
+        <p class="subtitle">A WhatsApp-style demo</p>
+        <div class="profile">
+          <label for="username">Your name</label>
+          <input id="username" maxlength="24" placeholder="e.g. Alex" />
+          <button id="joinBtn">Join chat</button>
+        </div>
+        <section>
+          <h2>Online now</h2>
+          <ul id="onlineList"></ul>
+        </section>
+      </aside>
+
+      <main class="chat-panel">
+        <header>
+          <h2>Community room</h2>
+          <span id="typingIndicator"></span>
+        </header>
+        <section id="messages" class="messages"></section>
+
+        <form id="chatForm" class="composer">
+          <input
+            id="messageInput"
+            type="text"
+            placeholder="Type a message"
+            autocomplete="off"
+            disabled
+          />
+          <button type="submit" disabled id="sendBtn">Send</button>
+        </form>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
